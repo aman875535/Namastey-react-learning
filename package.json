@@ -1,0 +1,23 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namstey react learning ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aman875535/Namastey-react-learning.git"
+  },
+  "keywords": [],
+  "author": "Akashay saini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aman875535/Namastey-react-learning/issues"
+  },
+  "homepage": "https://github.com/aman875535/Namastey-react-learning#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}

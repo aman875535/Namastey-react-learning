@@ -1,0 +1,30 @@
+# igniting app
+
+npm init --  follow the asking things
+
+npm not stands for node pakage manage but its actully package manager
+npm install -D parcel --- Parcel is a bundler which helps to make production ready app (-D refers to dev dependencies )
+
+
+--- two type of dependencies(packages) -  1- dev dependencies -- generally require during development
+                                          2-  normal use for productions
+
+
+package.json --  it is configration of npm , its tracks all version or which versoin of package is installed to our system.
+
+package.log.json --  its tracked the which exact version is install to our app or system (locked the version and keep record of it)--|
+
+ "integrity": "sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w==" --
+ sha512 is a hash which match the version or dependencies after the development into a production that exact which version or package is installed
+
+
+
+why other modules insatlled with npm i parcal?? --important
+Ans-  we only install parcel but other dependencies came over there because parcel 
+have their own dependencies, and those dependensies are another dependencies ..
+"This is know as transitive dependencies"
+
+
+"parcel": "^2.9.3" --- use of "^"caret -- when ever the minor version is upgraded it will take latest automatically
+"parcel": "~2.9.3"  --- use "~" tilde -- when ever the major versiomn is upgarded it will take automatically
+
