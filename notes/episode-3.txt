@@ -51,3 +51,51 @@ exam-
 write the code into (),  that Babel can understand start and end of the code
 const jsxHeading =(<h1 id="heading" className="heading"> Using JSX</h1>)
 
+
+--------------------episode-3 --- 2nd part
+
+REACT COMPONENTS
+1- React class based components --  odl practice
+2-  React functional components --  New wayss
+
+--  a function which is returning some JSX or , ReactElement(before its object after render is HTML) is Funtional component
+
+
+Note ---  When using Funtional component always First letter will be "CAPITAL"
+const Heading = ()=>{
+    return <h1>Namastey React Functional Component</h1>;
+}
+
+sort handed----------
+ 
+ const Heading = ()=><h1>Namastey React Functional Component</h1>;
+ write multi html wrap it into () ===  const Heading = ()=>(<h1>Namastey React Functional Component</h1>);
+
+ for render it to root we have to write
+ root.render(<Heading />) ----------
+ Babel raed < ABC />n treat as component-------------
+
+
+// if we want to write Heading1 into Heding component----  
+const Heading1 = () => {
+  return (
+    <div className="parent">
+      <h1>Namastey React Functional Component</h1> 
+    </div>
+  );
+};
+
+
+const Heading = () => {
+    return (
+      <div className="parent">
+        <Heading1 />
+        <h1>Namastey React Functional Component</h1> 
+      </div>
+    );
+  };
+
+ root.render(<Heading />) 
+
+ Important --- The above code is known as "COMPONENTS COMPOSITION"
+COMPONENTS COMPOSITION ---  Render the component inside the another component
