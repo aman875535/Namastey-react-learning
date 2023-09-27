@@ -15,7 +15,8 @@ package.json --  it is configration of npm , its tracks all version or which ver
 package.log.json --  its tracked the which exact version is install to our app or system (locked the version and keep record of it)--|
 
  "integrity": "sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w==" --
- sha512 is a hash which match the version or dependencies after the development into a production that exact which version or package is installed
+ sha512 is a hash which match the version or dependencies after the development into a production that exact which version or package 
+ is installed
 
 
 
@@ -51,7 +52,7 @@ parcel create the local server to host our app
 # Parcel
 - Dev Build
 Local Server
-- HMR = Hot Module Replacement (Auto refresh the page when we save file in vs)
+- HMR = Hot Module Replacement (Auto refresh the page when we save file in vs nd reflect to browser automatically)
 - file watching algorithm  --written in C++---
 - faster  build experience -- Chaching
  -- image optimisation
@@ -59,15 +60,16 @@ Local Server
  -compressing
  -- consistence Hasing --(track records)
  --code splite
- -diffrential bundling -- app will be hosted cross browsers
+ -diffrential bundling -- app will be hosted cross browsers (dev, prod)
  -- diagnostic
  --error handling
  -- https ---
+ --tree shaking--  remove unused code
 
-now change our index.html where we inject CDN lins to get react into our app we have to remove CDN's coz this is 
+now change our index.html where we inject CDN linss to get react into our app we have to remove CDN's coz this is 
 not preferable way to worked. >>>>
 
-we will not use react using CDN's , we will use this command for react  --npm install react and npm install react-dom--🙄
+we will not use react using CDN's , we will use this pakages for react  --npm install react and npm install react-dom--🙄
 
 after that we can remove the cdns from index.html ----
 
@@ -97,4 +99,17 @@ this is beacuse the line of   <script src="./app.js"> </script> browser will tre
 and js dont understand imports
 soo we havt to add  -- type="module" --   in this line "  <script type="module" src="./app.js"> </script> 
 
+----grnrrate for build --
+npx parcel build index.html
+
+remove the entry point from package .json -- main : App.js (example)
+
+we can tell the app for the compatible version of browsers we need to add something in package.json
+below the dependencies -
+
+"broserslist":[
+  "last 2 Crome version"
+
+  "last 2 version" // this is for all version
+]
 

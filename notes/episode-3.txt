@@ -1,0 +1,53 @@
+<-------------------episode 3 ---------------------->
+
+find the script in package.json and  write some command into script block
+
+script: {
+    "start": 'parcel index.html'
+    "build" : 'parcal build index.html'
+}
+npm start == npm run start
+
+remove the code from app.js --- below code no longer with us---😢
+
+const parent = React.createElement('div', {id:'parent'}, [  React.createElement('div', { id: 'child' },
+React.createElement('h1', {}, "I am H1 tag"), [React.createElement('h2', {}, "I am H2 tag🚀")
+]),
+ React.createElement('div', { id: 'child' },
+React.createElement('h1', {}, "I am H1 tag"), [React.createElement('h2', {}, "I am H2 tag")
+])
+
+
+
+])
+
+console.log(parent) 
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(parent) 
+
+
+
+npm start ---------------------------->>>>>>>>
+react element are similer to Dom element (The inspect elemnts -- All html)
+
+JSX element creation -- Not html in js --🙄, its html like syntax (looks like)
+
+JS engine not understand JSX --  it only understand JS (ES6s)
+
+** JSX code will transpiled(transformed) to react code by Parcel--(Pakage Babel) before its reaches the JS Engine** 
+
+-- Babel is supporting pAckage in parsel------
+
+JSX convert the things into React.createElemt ==> and react.createElement convert JS object and then  HtmlElement--
+means JSX = react.createElement
+for adding the clas attr -- we have to use "className"
+const jsxHeading = <h1 className="heading"> Using JSX</h1>
+
+if you have to add attribute into JSX you havew to use camelCase --
+exam- 
+1 -  className =""
+2- tabIndex = ""
+
+write the code into (),  that Babel can understand start and end of the code
+const jsxHeading =(<h1 id="heading" className="heading"> Using JSX</h1>)
+
