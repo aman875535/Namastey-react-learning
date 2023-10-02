@@ -23,8 +23,8 @@ const RestaurantCards =(props)=>{ // getting an object here of props as argument
 return (
   <div className="resto-cards">
     <img class="res-img" alt="res-img" src ="https://www.realsimple.com/thmb/2ixrIIlE-44L1MypGHIs2TqIQYk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-recipes-1672e2b4f9104ed3b3867a2a14889ce9.jpg"/>
-<h3>Your Taste</h3>
-<h4>Dont Know</h4>
+<h3>{props.resName}</h3>
+<h4>{props.cusine}</h4>
 <h4>4.2 star</h4>
 
   </div>
@@ -45,3 +45,19 @@ const Body = ()=>{
     </div>
   )
 }
+
+if you want to add dyanmic data into a component you will pass the data as a "PROPs"
+
+some are destructure the props like -- 
+const Abc=({resName, cusine})=>{
+    <h1>{resName}</h1>
+}
+
+or
+
+const Abc=(props)=>{
+    cosnt {resName, cusine}= props;
+    <h1>{resName}</h1>
+}
+
+this is object destructuring

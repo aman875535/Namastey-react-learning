@@ -42,12 +42,13 @@ const Header = () => {
   );
 };
 
-const RestaurantCards =()=>{
+const RestaurantCards =(props)=>{
+  console.log(props)
 return (
   <div className="resto-cards">
-    <img class="res-img" alt="res-img" src ="https://www.realsimple.com/thmb/2ixrIIlE-44L1MypGHIs2TqIQYk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-recipes-1672e2b4f9104ed3b3867a2a14889ce9.jpg"/>
-<h3>Your Taste</h3>
-<h4>Dont Know</h4>
+    <img className="res-img" alt="res-img" src ="https://www.realsimple.com/thmb/2ixrIIlE-44L1MypGHIs2TqIQYk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-recipes-1672e2b4f9104ed3b3867a2a14889ce9.jpg"/>
+<h3>{props.resName}</h3>
+<h4>{props.cusine}</h4>
 <h4>4.2 star</h4>
 
   </div>
@@ -59,7 +60,8 @@ const Body = ()=>{
       <div className="search">Search</div>
       <div className="restaurant-conatiner">
         {/* restaurant cards */}
-        <RestaurantCards />
+        <RestaurantCards resName="Meghna foods" cusine="noodles" />
+        <RestaurantCards resName="KFC" cusine="burger" />
       </div>
     </div>
   )
