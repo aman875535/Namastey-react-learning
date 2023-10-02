@@ -1,0 +1,47 @@
+Start building a food app --- 
+with these conatiners--- ss
+*Header
+*Logo
+* Nav Items
+* Body
+* Search
+*RestaurantContainerss
+- RestaurantCard
+* Footer
+* Copyright
+*- Links
+* .-.Address
+* Contact
+*/
+
+introduction of PROPS(properties) --- 
+
+Props - Passing a props to a function its just passing a argument into a function---
+
+const RestaurantCards =(props)=>{ // getting an object here of props as argument
+    console.log(props) --- its will return a object 
+return (
+  <div className="resto-cards">
+    <img class="res-img" alt="res-img" src ="https://www.realsimple.com/thmb/2ixrIIlE-44L1MypGHIs2TqIQYk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-recipes-1672e2b4f9104ed3b3867a2a14889ce9.jpg"/>
+<h3>Your Taste</h3>
+<h4>Dont Know</h4>
+<h4>4.2 star</h4>
+
+  </div>
+)
+}
+
+const Body = ()=>{
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="restaurant-conatiner">
+        {/* restaurant cards */}
+
+        asigning props to componet -- here RestaurantCard componet below--
+        <RestaurantCards resName="Meghna foods" cusine="noodles"/>
+        <RestaurantCard resName="KFC" cusine="burger"/>
+      </div>
+    </div>
+  )
+}

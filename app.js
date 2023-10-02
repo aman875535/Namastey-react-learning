@@ -1,37 +1,78 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// const parent = React.createElement('div', {id:'parent'}, "JSX creation")
+/* *Header
+ *Logo
+ * Nav Items
+ * Body
+ * Search
+ *RestaurantContainerss
+ - RestaurantCard
+    - img
+    - names of restau
+    - rating
+    -cuisines
+    - delivery time
 
-// JSX-----------
+ * Footer
+ * Copyright
+ *- Links
+ * .-.Address
+ * Contact
+ */
 
-// episode 3
-//react Functional components
-
-// const Heading = ()=>{
-//     return <h1>Namastey React Functional Component</h1>;
-// }
-
-// const Heading = ()=><h1>Namastey React Functional Component</h1>; // sort handed
-// for multy html
-const Heading1 = () => {
+const Header = () => {
   return (
-    <div className="parent">
-      <h1>Namastey React Functional Component</h1> 
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=food&sf="
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About US</li>
+          <li>Contact US</li>
+          <li>Cart </li>
+        </ul>
+      </div>
     </div>
   );
 };
 
-// if we want to write Heading1 into Heding component----  
-const Heading = () => {
-    return (
-      <div className="parent">
-        <Heading1 />
-        <h1>Namastey React Functional Component</h1> 
-      </div>
-    );
-  };
-const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
+const RestaurantCards =()=>{
+return (
+  <div className="resto-cards">
+    <img class="res-img" alt="res-img" src ="https://www.realsimple.com/thmb/2ixrIIlE-44L1MypGHIs2TqIQYk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-recipes-1672e2b4f9104ed3b3867a2a14889ce9.jpg"/>
+<h3>Your Taste</h3>
+<h4>Dont Know</h4>
+<h4>4.2 star</h4>
 
-root.render(<Heading />)
+  </div>
+)
+}
+const Body = ()=>{
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="restaurant-conatiner">
+        {/* restaurant cards */}
+        <RestaurantCards />
+      </div>
+    </div>
+  )
+}
+
+const AppLayout = () => {
+  return <div className="app">
+    {/* Header componet */}
+    <Header />
+     {/* Body componet */}
+     <Body />
+  </div>;
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);

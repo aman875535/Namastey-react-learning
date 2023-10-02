@@ -4,7 +4,7 @@
   "description": "This is namstey react learning ",
   "scripts": {
     "start": "parcel index.html",
-    "build" : "parcal build index.html",
+    "build": "parcal build index.html",
     "test": "jest"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/aman875535/Namastey-react-learning#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
     "parcel": "^2.9.3",
     "process": "^0.11.10"
   },
@@ -26,7 +27,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "broserslist":[
+  "broserslist": [
     "last 2 versions"
   ]
 }

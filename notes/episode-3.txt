@@ -32,7 +32,7 @@ react element are similer to Dom element (The inspect elemnts -- All html)
 
 JSX element creation -- Not html in js --🙄, its html like syntax (looks like)
 
-JS engine not understand JSX --  it only understand JS (ES6s)
+JS engine not understand JSX --  it only understand JS (ES6)
 
 ** JSX code will transpiled(transformed) to react code by Parcel--(Pakage Babel) before its reaches the JS Engine** 
 
@@ -55,7 +55,7 @@ const jsxHeading =(<h1 id="heading" className="heading"> Using JSX</h1>)
 --------------------episode-3 --- 2nd part
 
 REACT COMPONENTS
-1- React class based components --  odl practice
+1- React class based components --  old practice
 2-  React functional components --  New wayss
 
 --  a function which is returning some JSX or , ReactElement(before its object after render is HTML) is Funtional component
@@ -99,3 +99,62 @@ const Heading = () => {
 
  Important --- The above code is known as "COMPONENTS COMPOSITION"
 COMPONENTS COMPOSITION ---  Render the component inside the another component
+
+
+---- episode 3- last part--- 
+
+in jsx code if we using  "{ }"  any where .. we can code JS inner that
+
+
+const Heading = () => {
+    return (
+      <div className="parent">
+      {.....  any JS LOGIC}
+        <Heading1 />
+        <h1>Namastey React Functional Component</h1> 
+      </div>
+    );
+  };
+
+  JSX prevent cross side scripting attacks--  its not blindly run the script inside the browser , its senetise it
+--- code for laste episode
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// const parent = React.createElement('div', {id:'parent'}, "JSX creation")
+
+// JSX-----------
+
+// episode 3
+//react Functional components
+
+// const Heading = ()=>{
+//     return <h1>Namastey React Functional Component</h1>;
+// }
+
+// const Heading = ()=><h1>Namastey React Functional Component</h1>; // sort handed
+// for multy html
+const Heading1 = () => {
+  return (
+    <div className="parent">
+      <h1>Namastey React Functional Component</h1> 
+    </div>
+  );
+};
+
+// if we want to write Heading1 into Heding component----  
+const Heading = () => {
+    return (
+      <div className="parent">
+        <Heading1 />
+        <h1>Namastey React Functional Component</h1> 
+      </div>
+    );
+  };
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(heading);
+
+root.render(<Heading />)
+
+we can render Component inner component like this-- <Heading /> , <Heading></Heading>, {Heading()}
+
